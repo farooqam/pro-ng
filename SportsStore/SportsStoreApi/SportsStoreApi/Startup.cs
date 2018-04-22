@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using SportsStoreApi.DataAccess;
 using SportsStoreApi.DataAccess.Ef;
 using SportsStoreApi.DataAccess.Ef.SeedData;
 
@@ -23,6 +24,7 @@ namespace SportsStoreApi
         public void ConfigureServices(IServiceCollection services)
         {
             ConfigureEf(services);
+            services.TryAddScoped<IProductRepository, ProductRepository>();
             services.AddMvc();
         }
         
