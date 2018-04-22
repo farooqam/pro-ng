@@ -11,8 +11,8 @@ using System;
 namespace SportsStoreApi.DataAccess.Ef.Migrations
 {
     [DbContext(typeof(SportsStoreDbContext))]
-    [Migration("20180422080047_Initial6")]
-    partial class Initial6
+    [Migration("20180422081858_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

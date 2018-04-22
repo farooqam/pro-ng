@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using System.Collections.Generic;
 
 namespace SportsStoreApi.DataAccess.Ef.Migrations
 {
@@ -23,6 +25,7 @@ namespace SportsStoreApi.DataAccess.Ef.Migrations
                 {
                     ProductId = table.Column<string>(unicode: false, maxLength: 100, nullable: false),
                     Description = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(maxLength: 100, nullable: false),
                     Price = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
@@ -31,7 +34,7 @@ namespace SportsStoreApi.DataAccess.Ef.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductCategorization",
+                name: "ProductCategorizations",
                 columns: table => new
                 {
                     CategoryName = table.Column<string>(nullable: false),
@@ -39,15 +42,15 @@ namespace SportsStoreApi.DataAccess.Ef.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductCategorization", x => new { x.CategoryName, x.ProductId });
+                    table.PrimaryKey("PK_ProductCategorizations", x => new { x.CategoryName, x.ProductId });
                     table.ForeignKey(
-                        name: "FK_ProductCategorization_Categories_CategoryName",
+                        name: "FK_ProductCategorizations_Categories_CategoryName",
                         column: x => x.CategoryName,
                         principalTable: "Categories",
                         principalColumn: "Name",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProductCategorization_Products_ProductId",
+                        name: "FK_ProductCategorizations_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "ProductId",
@@ -55,15 +58,15 @@ namespace SportsStoreApi.DataAccess.Ef.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductCategorization_ProductId",
-                table: "ProductCategorization",
+                name: "IX_ProductCategorizations_ProductId",
+                table: "ProductCategorizations",
                 column: "ProductId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductCategorization");
+                name: "ProductCategorizations");
 
             migrationBuilder.DropTable(
                 name: "Categories");

@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20180422070701_Initial.cs" />
+    <Compile Remove="Migrations\20180422071516_Initial2.cs" />
+    <Compile Remove="Migrations\20180422073403_Initial3.cs" />
+    <Compile Remove="Migrations\20180422074817_Initial4.cs" />
+    <Compile Remove="Migrations\20180422074955_Initial5.cs" />
+    <Compile Remove="Migrations\20180422081356_initial.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
   </ItemGroup>
 
