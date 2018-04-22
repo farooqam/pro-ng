@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using SportsStore.DataAccess.Ef;
 
 namespace SportsStoreApi.DataAccess
 {

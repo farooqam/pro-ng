@@ -1,4 +1,4 @@
-﻿namespace SportsStore.DataAccess.Ef
+﻿namespace SportsStoreApi.DataAccess.Ef
 {
     public class SportsStoreDbContextSettings
     {

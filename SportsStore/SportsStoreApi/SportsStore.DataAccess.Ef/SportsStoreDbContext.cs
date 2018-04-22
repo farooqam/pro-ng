@@ -1,8 +1,6 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using SportsStoreApi.DataAccess;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace SportsStore.DataAccess.Ef
+namespace SportsStoreApi.DataAccess.Ef
 {
     public class SportsStoreDbContext : DbContext
     {
@@ -53,13 +51,13 @@ namespace SportsStore.DataAccess.Ef
             {
                 entity.HasOne(e => e.Category)
                     .WithMany(e => e.ProductCategorizations)
-                    .HasForeignKey(e => e.Category);
+                    .HasForeignKey(e => e.CategoryName);
 
                 entity.HasOne(e => e.Product)
                     .WithMany(e => e.ProductCategorizations)
-                    .HasForeignKey(e => e.Product);
+                    .HasForeignKey(e => e.ProductId);
 
-                entity.HasKey(e => new { e.Category, e.Product});
+                entity.HasKey(e => new { e.CategoryName, e.ProductId});
 
             });
         }

@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>SportsStoreApi.DataAccess.Ef</AssemblyName>
+    <RootNamespace>SportsStoreApi.DataAccess.Ef</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
