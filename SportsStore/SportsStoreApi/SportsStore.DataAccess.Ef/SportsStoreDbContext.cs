@@ -14,6 +14,9 @@ namespace SportsStoreApi.DataAccess.Ef
 
         public virtual DbSet<Category> Categories { get; set; }
 
+        public virtual DbSet<ProductCategorization> ProductCategorizations { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_settings.ConnectionString);
@@ -34,6 +37,11 @@ namespace SportsStoreApi.DataAccess.Ef
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .IsUnicode(true);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .IsUnicode(true)
+                    .HasMaxLength(100);
 
                 entity.HasKey(e => e.ProductId);
             });

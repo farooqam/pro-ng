@@ -11,9 +11,10 @@ using System;
 namespace SportsStoreApi.DataAccess.Ef.Migrations
 {
     [DbContext(typeof(SportsStoreDbContext))]
-    partial class SportsStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180422074817_Initial4")]
+    partial class Initial4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,7 +46,6 @@ namespace SportsStoreApi.DataAccess.Ef.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
                         .IsUnicode(true);
 
                     b.Property<decimal>("Price");

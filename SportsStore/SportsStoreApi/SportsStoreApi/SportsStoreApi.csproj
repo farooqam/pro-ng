@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SportsStore.DataAccess.Ef\SportsStore.DataAccess.Ef.csproj" />
+    <ProjectReference Include="..\SportsStoreApi.DataAccess.Ef.SeedData\SportsStoreApi.DataAccess.Ef.SeedData.csproj" />
     <ProjectReference Include="..\SportsStoreApi.DataAccess\SportsStoreApi.DataAccess.csproj" />
   </ItemGroup>
 
