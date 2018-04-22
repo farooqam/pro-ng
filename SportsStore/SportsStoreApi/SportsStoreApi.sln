@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.DataAccess.Ef",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStoreApi.DataAccess.Ef.SeedData", "SportsStoreApi.DataAccess.Ef.SeedData\SportsStoreApi.DataAccess.Ef.SeedData.csproj", "{1986C07F-99BD-4C58-9DB4-81036D0C72E5}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DA436E31-FE25-4754-9ED1-CB4CF147BA36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1986C07F-99BD-4C58-9DB4-81036D0C72E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1986C07F-99BD-4C58-9DB4-81036D0C72E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1986C07F-99BD-4C58-9DB4-81036D0C72E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA436E31-FE25-4754-9ED1-CB4CF147BA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA436E31-FE25-4754-9ED1-CB4CF147BA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA436E31-FE25-4754-9ED1-CB4CF147BA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA436E31-FE25-4754-9ED1-CB4CF147BA36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
